@@ -11,13 +11,14 @@
 		
 	<?php endif; ?>
 
-	<div class="single-header-bg">
-		<header class="entry-header">
-			<?php
-	            $cats = get_the_category();
-	            $cat_name = $cats[0]->name;
-	            $cat_slug_name = $cats[0]->slug;
-	        ?>
+	<?php
+        $cats = get_the_category();
+        $cat_name = $cats[0]->name;
+        $cat_slug_name = $cats[0]->slug;
+    ?>
+
+	<div class="single-header-bg <?php echo $cat_slug_name; ?>">
+		<header class="entry-header">			
 	        <div class="post-category">
 			 	#<?php echo $cat_name; ?>
 			 </div>
@@ -52,14 +53,12 @@
 
 
 		<div class="main-content-right col-md-3">
-			<div>Tags:</div>
-			<?php foreach ( $postslist as $post ) :
-			  setup_postdata( $post );
-			  
-			  
-			  the_tags('', ', ', '');
-			  endforeach; 
-			?>
+			<div class="post-tags-caption">Tags:</div>
+			<?php foreach ( $postslist as $post ) : setup_postdata( $post ); ?>		  
+			  <div class="post-tags"><?php the_tags('', ', ', ''); ?></div>
+			  <?php endforeach; 
+			  wp_reset_postdata();
+			  ?>
 		</div>
 		
 		<div class="main-content-right col-md-9">
@@ -103,7 +102,13 @@
 						<div class="related-post <?php echo $cat_slug_name; ?>">
 						 	#<?php echo $cat_name; ?>
 						</div>  
-						<h2 class="related-post-title"><?php the_title(); ?></h2>					
+						<?php
+							$title = get_the_title();
+							$short_title = substr(strip_tags($title), 0, 35);
+							$short_title = strlen($title) > 35 ? substr($short_title,0,35)."..." : $title;				
+							echo '<h2><a class="related-post-title" href="' . get_permalink() . '" rel="bookmark">'.$short_title.'</a></h2>';
+						?>
+						<!-- <h2 class="related-post-title"><?php the_title(); ?></h2> -->					
 						<div class="related-post-content"><?php the_excerpt(); ?></div>
 					</div>
 			<?php

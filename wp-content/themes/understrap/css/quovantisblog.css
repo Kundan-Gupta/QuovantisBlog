@@ -40,15 +40,23 @@
     color:#4f5a65;
 }
 
+.home .category-menu ul#main-menu li a:focus,
+.home .category-menu ul#main-menu li a:hover{
+    color:#4f5a65;
+    outline: none;
+}
+
 
 .category-menu ul#main-menu li{
 	/*padding: 0 30px;*/
 }
 article .entry-header .blog-meta .category,
 .category .category-menu ul li.current-menu-item a,
+article .entry-header .blog-meta .category a:focus,
 article .entry-header .blog-meta .category a:hover{
     color: #895cd1;
     text-decoration: none;
+    outline: none;
 }
 
 article .entry-header .blog-meta .category,
@@ -64,35 +72,47 @@ article .entry-header .blog-meta .category a{
 .archive .current-menu-item .active a,
 .category .current-menu-item .active a,
 .category .caption .post-category.design,
+.archive .caption .entry-meta .author.design .published-on,
 article .entry-header .blog-meta .design, 
 .single .related-post.design,
 article .entry-header .blog-meta .design a,
+article .entry-header .blog-meta .design a:focus,
 article .entry-header .blog-meta .design a:hover{
     color: #0081FF;     
+    outline: none;
 }
 
 article .entry-header .blog-meta .technologies, 
 .category .caption .post-category.technologies,
+.archive .caption .entry-meta .author.technologies .published-on,
 .single .related-post.technologies,
 article .entry-header .blog-meta .technologies a,
+article .entry-header .blog-meta .technologies a:focus,
 article .entry-header .blog-meta .technologies a:hover{
     color: #3FB1F8; 
+    outline: none;
 }
 
 article .entry-header .blog-meta .agile, 
 .category .caption .post-category.agile,
+.archive .caption .entry-meta .author.agile .published-on,
 .single .related-post.agile,
 article .entry-header .blog-meta .agile a,
+article .entry-header .blog-meta .agile a:focus,
 article .entry-header .blog-meta .agile a:hover{
     color: #33CCCC; 
+    outline: none;
 }
 
 article .entry-header .blog-meta .people-practices, 
 .category .caption .post-category.people-practices,
+.archive .caption .entry-meta .author.people-practices .published-on,
 .single .related-post.people-practices,
 article .entry-header .blog-meta .people-practices a,
+article .entry-header .blog-meta .people-practices a:focus,
 article .entry-header .blog-meta .people-practices a:hover{
     color: #F58723; 
+    outline: none;
 }
 
 .home .container .content-area article.grid-view, 
@@ -112,7 +132,7 @@ article .entry-header .blog-meta .people-practices a:hover{
 
 header.entry-header {
     border: 1px solid #e4e1e1;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 .blog-image{
@@ -127,27 +147,31 @@ article .blog-image img{
 }
 
 article .blog-image img.design{
-    background: #ddd url('../images/design.png') no-repeat scroll center center/ 100%;
+    background: #0081FF url('../images/design.png') no-repeat scroll center center/ 100%;
+    border-radius: 4px 4px 0 0;
 }
 
 article .blog-image img.technologies{
-    background: #ddd url('../images/technology.png') no-repeat scroll center center/ 100%;
+    background: #3FB1F8 url('../images/technology.png') no-repeat scroll center center/ 100%;
+    border-radius: 4px 4px 0 0;
 }
 
 article .blog-image img.agile{
-    background: #ddd url('../images/agile.png') no-repeat scroll center center/ 100%;
+    background: #33CCCC url('../images/agile.png') no-repeat scroll center center/ 100%;
+    border-radius: 4px 4px 0 0;
 }
 
 article .blog-image img.people-practices{
-    background: #ddd url('../images/people_practices.png') no-repeat scroll center center/ 100%;
+    background: #F58723 url('../images/people_practices.png') no-repeat scroll center center/ 100%;
+    border-radius: 4px 4px 0 0;
 }
 
-article .blog-image img:not(.design):not(.agile){
-    background: #ddd url('../images/technology.png') no-repeat scroll center center/ 100%;
-}
+/*article .blog-image img:not(.design):not(.agile){
+    background: #3fb1f8 url('../images/technology.png') no-repeat scroll center center/ 100%;
+}*/
 
 .blog-meta{
-    height: 265px;
+    height: 200px;
     margin: 20px;
     position: relative;
 }
@@ -161,14 +185,16 @@ article .blog-image img:not(.design):not(.agile){
     text-align:left;
 }
 
+.blog-meta .entry-title a:focus,
 .blog-meta .entry-title a:hover{
     color:#2d4158;
     text-decoration: none;
+    outline: none;
 }
 
 .blog-meta .entry-meta{
     bottom: 0;
-    margin-bottom: 14px;
+    /*margin-bottom: 14px;*/
     position: absolute;
 }
 
@@ -193,13 +219,17 @@ article .blog-image img:not(.design):not(.agile){
     text-align:left;
 }
 
+.entry-meta .byline a:focus,
 .entry-meta .byline a:hover{
     text-decoration: none;
     color: #0081FF;
+    outline: none;
 }
 
+.entry-meta .posted-on a:focus,
 .entry-meta .posted-on a:hover{
     text-decoration: none;
+    outline: none;
 }
 
 .wrapper-navbar{
@@ -220,16 +250,20 @@ article .blog-image img:not(.design):not(.agile){
 }*/
 
 .archive .bg-inverse a.navbar-brand, 
+.archive .bg-inverse a.navbar-brand:focus,
 .archive .bg-inverse a.navbar-brand:hover,
 .category .bg-inverse a.navbar-brand,
+.category .bg-inverse a.navbar-brand:focus,
 .category .bg-inverse a.navbar-brand:hover,
-.single .bg-inverse a.navbar-brand, 
+.single .bg-inverse a.navbar-brand,
+.single .bg-inverse a.navbar-brand:focus,
 .single .bg-inverse a.navbar-brand:hover{
     font-family:Gotham-Light;
     font-size:30px;
     color:#2cacc0;
     letter-spacing:-1.32px;
     text-align:left;
+    outline: none;
 }
 
 
@@ -267,48 +301,68 @@ hr.separator {
 /* Category Page */
 
 .archive .navbar ul li:not(.active) a,
+.archive .navbar ul li:not(.active) a:focus,
 .archive .navbar ul li:not(.active) a:hover,
 .category .navbar ul li:not(.active) a,
+.category .navbar ul li:not(.active) a:focus,
 .category .navbar ul li:not(.active) a:hover,
 .single .navbar ul li:not(.active) a,
+.single .navbar ul li:not(.active) a:focus,
 .single .navbar ul li:not(.active) a:hover{
     color:#4f5a65;
+    outline: none;
 }
 
 .archive .navbar ul li.active.design a,
+.archive .navbar ul li.active.design a:focus,
 .archive .navbar ul li.active.design a:hover,
 .category .navbar ul li.active.design a,
+.category .navbar ul li.active.design a:focus,
 .category .navbar ul li.active.design a:hover,
 .single .navbar ul li.current-post-ancestor.design a,
+.single .navbar ul li.current-post-ancestor.design a:focus,
 .single .navbar ul li.current-post-ancestor.design a:hover{
     color: #0081FF; 
+    outline: none;
 }
 
 .archive .navbar ul li.active.technologies a,
+.archive .navbar ul li.active.technologies a:focus,
 .archive .navbar ul li.active.technologies a:hover,
 .category .navbar ul li.active.technologies a,
+.category .navbar ul li.active.technologies a:focus,
 .category .navbar ul li.active.technologies a:hover,
 .single .navbar ul li.current-post-ancestor.technologies a,
+.single .navbar ul li.current-post-ancestor.technologies a:focus,
 .single .navbar ul li.current-post-ancestor.technologies a:hover{
     color: #3FB1F8; 
+    outline: none;
 }
 
 .archive .navbar ul li.active.agile a,
+.archive .navbar ul li.active.agile a:focus,
 .archive .navbar ul li.active.agile a:hover,
 .category .navbar ul li.active.agile a,
+.category .navbar ul li.active.agile a:focus,
 .category .navbar ul li.active.agile a:hover,
 .single .navbar ul li.current-post-ancestor.agile a,
+.single .navbar ul li.current-post-ancestor.agile a:focus,
 .single .navbar ul li.current-post-ancestor.agile a:hover{
     color: #33CCCC;
+    outline: none;
 }
 
 .archive .navbar ul li.active.people-practices a,
+.archive .navbar ul li.active.people-practices a:focus,
 .archive .navbar ul li.active.people-practices a:hover,
 .category .navbar ul li.active.people-practices a,
+.category .navbar ul li.active.people-practices a:focus,
 .category .navbar ul li.active.people-practices a:hover,
 .single .navbar ul li.current-post-ancestor.people-practices a,
+.single .navbar ul li.current-post-ancestor.people-practices a:focus,
 .single .navbar ul li.current-post-ancestor.people-practices a:hover{
     color: #F58723; 
+    outline: none;
 }
 
 
@@ -320,6 +374,7 @@ hr.separator {
 }
 
 .logo .navbar-brand,
+.logo.navbar-brand:focus,
 .logo.navbar-brand:hover{
     font-family:Gotham-Light;
     font-size:62px;
@@ -327,6 +382,7 @@ hr.separator {
     letter-spacing:-2.72px;
     display: block;
     float:none;
+    outline: none;
 }
 
 .logo .tag-line{
@@ -351,7 +407,8 @@ hr.separator {
 
 .blog .container,
 .archive .container,
-.category .container{
+.category .container,
+.single .container{
     max-width: 1200px;
 }
 
@@ -368,6 +425,7 @@ hr.separator {
 
 .navbar-fixed-top .logo{
     display: inline-block;
+    float: left;
     margin: 0;
     text-align: left;
     padding: 0;
@@ -428,15 +486,52 @@ hr.separator {
 .archive .navbar-fixed-top + .wrapper,
 .category .navbar-fixed-top + .wrapper,
 .single .navbar-fixed-top + .wrapper{
-    padding-top: 72px;
+    /*padding-top: 72px;*/
+    padding-top: 52px
 }
 
 .single .single-header-bg{
-    background: url("../images/category-design.png") no-repeat scroll 0 0 / cover rgba(0, 0, 0, 0);
+    /*background: url("../images/category-design.png") no-repeat scroll 0 0 / cover rgba(0, 0, 0, 0);*/
     display: table;
     height: 426px;
     width: 100%;
 }
+
+/*Remove this block of code and add image  */
+/*.single .single-header-bg.design {
+    background-color: #0081ff;
+}
+.single .single-header-bg.technologies {
+    background-color: #3FB1F8;
+}
+.single .single-header-bg.agile {
+    background-color: #33cccc;
+}
+.single .single-header-bg.people-practices {
+    background-color: #F58723;
+}*/
+
+.single .single-header-bg.design {
+    /*background-color: #0081ff;*/
+    background: url("../images/design-header.png") no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0);
+    position: relative;
+}
+.single .single-header-bg.technologies{
+    /*background-color: #3FB1F8;*/
+    background: url("../images/technology-header.jpg") no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0);
+    position: relative;
+}
+.single .single-header-bg.agile {
+    /*background-color: #33cccc;*/
+    background: url("../images/agile-header.png") no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0);
+    position: relative;
+}
+.single .single-header-bg.people-practices {
+    /*background-color: #F58723;*/
+    background: url("../images/people-practice-header.jpg") no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0);
+    position: relative;
+}
+/* End block */
 
 .single header.entry-header {
     display: table-cell;
@@ -457,8 +552,10 @@ hr.separator {
 .single .entry-meta .posted-by,
 .single .posted-on,
 .single .posted-on .published-on,
+.single .entry-meta .author-name:focus,
 .single .entry-meta .author-name:hover{
     color:#fff;
+    outline: none;
 }
 
 .single .entry-meta .author-name{
@@ -484,7 +581,6 @@ hr.separator {
     font-family:Gotham-Book;
     font-size:12px;
     letter-spacing:0px;
-    opacity: 0.69;
     text-align:left;
 }
 
@@ -525,8 +621,10 @@ hr.separator {
     text-align: left;
 }
 
+.author .site-main .link-title:focus,
 .author .site-main .link-title:hover{
     text-decoration: none;
+    outline: none;
 }
 
 /* Load More Button */
@@ -546,12 +644,29 @@ hr.separator {
 }
 
 .elm-wrapper .elm-button .elm-button-text{
-    background: none repeat scroll 0 0 #44afbc;
-    border: 1px solid #44afbc;
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
     border-radius: 6px;
-    color: #fff;
+    color: #a0a0a0;
     font-size: 18px;
     padding: 9px 80px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.elm-wrapper .elm-button:hover span {
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+
+
+.elm-wrapper .elm-button:hover,
+.elm-wrapper .elm-button:focus,
+.elm-wrapper .elm-button:active:focus,
+.elm-wrapper .elm-button:active:hover{
+    outline: none;
 }
 
 .elm-loading-anim {
@@ -565,12 +680,35 @@ hr.separator {
 
 /* Category header background */
 .category .category-image-container {
-    background: url('../images/category-design.png') no-repeat 0 0 / cover;
+    /*background: url('../images/category-design.png') no-repeat 0 0 / cover;*/
     display: table;
     height: 426px;
     margin-bottom: 34px;
     width: 100%;
 }
+
+/*Remove this block of code and add image  */
+.category .category-image-container.design {
+    /*background-color: #0081ff;*/
+    background: url("../images/design-header.png") no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0);
+    position: relative;
+}
+.category .category-image-container.technologies {
+    /*background-color: #3FB1F8;*/
+    background: url("../images/technology-header.jpg") no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0);
+    position: relative;
+}
+.category .category-image-container.agile {
+    /*background-color: #33cccc;*/
+    background: url("../images/agile-header.png") no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0);
+    position: relative;
+}
+.category .category-image-container.people-practices {
+    /*background-color: #F58723;*/
+    background: url("../images/people-practice-header.jpg") no-repeat scroll 0 0 / 100% auto rgba(0, 0, 0, 0);
+    position: relative;
+}
+/* End block */
 
 .category .category-header-bg{
     display: table-cell;
@@ -583,7 +721,7 @@ hr.separator {
 
 .category .category-header-bg .header-post .caption {
     background-color: #fff;
-    border-radius: 3px;
+    border-radius: 4px;
     height: 244px;    
     padding: 30px;
     position: relative;
@@ -596,6 +734,7 @@ hr.separator {
 }
 
 .author-image .photo {
+    background: none repeat scroll 0 0 #fff;
     border-radius: 50%;
     height: 68px;
     object-fit: cover;
@@ -698,9 +837,11 @@ hr.separator {
     transition: none 0s ease 0s !important;
 }
 
+#footer-bottom-inside a:focus,
 #footer-bottom-inside a:hover {
     color: #fff;
     transition: none 0s ease 0s ;
+    outline: none;
 }
 
 .fa-twitter::before {
@@ -724,10 +865,12 @@ hr.separator {
     width: 32px;
 }
 
+#footer-bottom-inside a i:focus,
 #footer-bottom-inside a i:hover {
     background: none repeat scroll 0 0 #fff;
     border: 1px solid #fff;
     color: #0b8695;
+    outline: none;
 }
 
 .float-right #totop {
@@ -764,8 +907,10 @@ hr.separator {
     line-height: 36px;
 }
 
+.category .caption .entry-title .title:focus,
 .category .caption .entry-title .title:hover{
     text-decoration: none;
+    outline: none;
 }
 
 .single .related-blog {
@@ -783,7 +928,8 @@ hr.separator {
     border-bottom: 2px solid rgba(150, 150, 150, 0.19);
     font-size: 30px;
     letter-spacing: 0.72px;
-    margin-bottom: 35px;
+    line-height: 46px;
+    margin-bottom: 32px;
     text-align: left;
 }
 
@@ -792,8 +938,8 @@ hr.separator {
     font-size:17px;
     color:#2d4158;
     letter-spacing:0.25px;
-    line-height:29px;
-    margin-top: 10px;
+    line-height:28px;
+    margin-top: 12px;
     text-align:left;
 }
 
@@ -805,4 +951,68 @@ hr.separator {
     line-height: 34px;
     text-align: left;
     width: 100%;
+}
+
+.single .related-post-title:focus,
+.single .related-post-title:hover{
+    text-decoration: none;
+    outline: none;
+}
+
+.single .post-tags-caption{
+    font-family:Gotham-Medium;
+    font-size:15px;
+    color:#252525;
+    letter-spacing:0.7px;
+    line-height:27px;
+    text-align:left;
+}
+
+.single .post-tags,
+.single .post-tags a{
+    font-family:Gotham-Medium;
+    font-size:14px;
+    color:#0081ff;
+    letter-spacing:0.65px;
+    line-height:27px;
+    text-align:left;
+    text-transform: uppercase;
+}
+
+.single .post-tags a:focus,
+.single .post-tags a:hover{ 
+    text-decoration: none;
+    outline: none;
+}
+
+.single .related-post-content > p {
+    display: inline;
+}
+
+.single .btn-secondary,
+.single .btn-secondary:active,
+.single .btn-secondary.focus, 
+.single .btn-secondary:focus, 
+.single .btn-secondary:hover,
+.single .btn-secondary:active:hover,
+.single .btn-secondary:active:focus {
+    background-color: #fff;
+    border-color: #fff;
+    color: #373a3c;
+    outline: none;
+}
+
+.category .category-image-container.design::before,
+.category .category-image-container.technologies::before,
+.category .category-image-container.agile::before,
+.category .category-image-container.people-practices::before {
+    background: none repeat scroll 0 0 blue;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
 }

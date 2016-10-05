@@ -37,7 +37,8 @@ function understrap_posted_on() {
 	// );
 	$posted_on = sprintf(
 		esc_html_x( ' %s', 'post date', 'understrap' ),
-		'<a class="published-on" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		 '<a class="published-on" href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		// '<a class="published-on" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(

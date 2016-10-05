@@ -18,7 +18,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments-area <?php if(is_single()){ ?> container <?php } ?>">
 
     <?php // You can start editing here -- including this comment! ?>
 

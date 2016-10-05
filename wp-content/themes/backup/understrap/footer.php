@@ -11,7 +11,7 @@
 
 <?php get_sidebar('footerfull'); ?>
 
-<div class="wrapper" id="wrapper-footer">
+<div class="wrapper-footer" id="wrapper-footer">
     
     <div class="footer-bottom-container">
 

@@ -32,7 +32,7 @@
         <a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content', 'understrap' ); ?></a>
         
         
-        <header class="container">
+        <header class="container padding-left-x10 padding-right-x10">
             <div class="logo">
                 <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" 
                                         title="" 

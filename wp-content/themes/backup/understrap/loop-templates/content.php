@@ -33,8 +33,8 @@
 			<?php //the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 			<?php
 				$title = get_the_title();
-				$short_title = substr(strip_tags($title), 0, 50);
-				$short_title = strlen($title) > 50 ? substr($short_title,0,50)."..." : $title;				
+				$short_title = substr(strip_tags($title), 0, 53);
+				$short_title = strlen($title) > 53 ? substr($short_title,0,53)."..." : $title;				
 				echo '<h2 class="entry-title"><a href="' . get_permalink() . '" rel="bookmark">'.$short_title.'</a></h2>';
 			?>
 					
