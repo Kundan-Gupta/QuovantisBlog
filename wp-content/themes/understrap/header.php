@@ -17,7 +17,7 @@
 <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/quovantisblog.css">
+<!-- <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/quovantisblog.css"> -->
 <?php wp_head(); ?>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/custom.js"></script>
 </head>
